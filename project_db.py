@@ -14,7 +14,7 @@ class Base(DeclarativeBase):
     pass
 
 class Conversion(Base):
-    tablename = "conversions"
+    __tablename__ = "conversions"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     from_currency: Mapped[str] = mapped_column(String(3))
